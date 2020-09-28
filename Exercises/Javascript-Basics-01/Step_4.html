@@ -4,12 +4,7 @@
 <head>
     <title>Step 4</title>
     <meta charset="UTF-8">
-    <script>
-        let name = window.prompt("Please enter your name");
-        let surname = window.prompt("what is your last name?");
-        let city = window.prompt("where do you live?");
-        alert(`Name: ${name} \n Surname: ${surname} \n City: ${city}`);
-    </script>
+
 </head>
 
 <body>
@@ -17,8 +12,20 @@
         <label for="name">name : </label><input type="text" name="name" id="name" />
         <label for="surname">surname : </label><input type="text" name="surname" id="surname" />
         <label for="city">city : </label><input type="text" name="city" id="city" />
-        <button name="validate" id="validate">Validate</button>
+        <button name="validate" id="validate" onclick="dialog()">Validate</button>
     </form>
+    <script>
+        let dialog = function() {
+            let name = document.getElementById("name").value;
+            let surname = document.getElementById("surname").value;
+            let city = document.getElementById("city").value;
+            /*let name = window.prompt("Please enter your name");
+            let surname = window.prompt("what is your last name?");
+            let city = window.prompt("where do you live?");*/
+            alert(`Name: ${name} \n Surname: ${surname} \n City: ${city}`);
+            alert(document.getElementById("surname").value);
+        }
+    </script>
 </body>
 
 </html>
