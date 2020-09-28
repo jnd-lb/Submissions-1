@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Step 4</title>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <form>
-            <label for="name">name : </label><input type="text" name="name" id="name"/>
-            <label for="surname">surname : </label><input type="text" name="surname" id="surname"/>
-            <label for="city">city : </label><input type="text" name="city" id="city"/>
-            <button  name="validate" id="validate">Validate</button>
-        </form>
-    </body>
+
+<head>
+    <title>Step 4</title>
+    <meta charset="UTF-8">
+    <script>
+        let name = window.prompt("Please enter your name");
+        let surname = window.prompt("what is your last name?");
+        let city = window.prompt("where do you live?");
+        alert(`Name: ${name} \n Surname: ${surname} \n City: ${city}`);
+    </script>
+</head>
+
+<body>
+    <form>
+        <label for="name">name : </label><input type="text" name="name" id="name" />
+        <label for="surname">surname : </label><input type="text" name="surname" id="surname" />
+        <label for="city">city : </label><input type="text" name="city" id="city" />
+        <button name="validate" id="validate">Validate</button>
+    </form>
+</body>
+
 </html>
