@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Step 5</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-      <img src="images/image1.jpg" id="image1" />
-      <img src="images/image2.jpg" id="image2" />
-      <img src="images/image3.jpg" id="image3" />
-      <img src="images/image4.jpg" id="image4" />
-      <img src="images/image5.jpg" id="image5" />
+        <img src="images/image1.jpg" id="image1" />
+        <img src="images/image2.jpg" id="image2" />
+        <img src="images/image3.jpg" id="image3" />
+        <img src="images/image4.jpg" id="image4" />
+        <img src="images/image5.jpg" id="image5" />
     </div>
-  </body>
+    <script>
+        let images = Array.from(document.querySelectorAll("img"));
+        images.forEach((element, i) => {
+            element.addEventListener("mouseover", () => {
+                element.src = "images/image" + (i + 1) + "_2.jpg"
+            });
+        });
+    </script>
+</body>
+
 </html>
