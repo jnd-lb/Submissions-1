@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Step 1</title>
-  </head>
-  <body>
-      <img src="images/image1.jpg" id="image1" />
-  </body>
+</head>
+
+<body>
+    <img src="images/image1.jpg" id="image1" />
+    <script>
+        alert("Hover over it many times");
+        let img = document.querySelector('img');
+        let toggleVar = false;
+        img.addEventListener("mouseover", () => {
+            if (toggleVar) {
+                img.src = "images/image1.jpg";
+                toggleVar = !toggleVar;
+            } else {
+                img.src = "images/image1_2.jpg";
+                toggleVar = !toggleVar;
+            }
+        })
+    </script>
+</body>
+
 </html>
