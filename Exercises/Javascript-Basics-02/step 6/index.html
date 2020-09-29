@@ -12,6 +12,20 @@
     <img src="images/image3.jpg" id="image3" />
     <img src="images/image4.jpg" id="image4" />
     <img src="images/image5.jpg" id="image5" />
+    <script>
+        let images = Array.from(document.querySelectorAll("img"));
+        images.forEach((element, i) => {
+            element.addEventListener("mouseenter", () => {
+                element.src = "images/image" + (i + 1) + "_2.jpg";
+            });
+
+
+            element.addEventListener("mouseout", () => {
+                element.src = "images/image" + (i + 1) + ".jpg";
+            });
+
+        });
+    </script>
 </body>
 
 </html>
