@@ -7,14 +7,26 @@
 </head>
 
 <body>
-    <script>
-    </script>
     <form>
-        <label for="name">Your nameG  : </label><input type="text" name="name" value="Doe" id="name" />
+        <label for="name">Your nameG  : </label> <input type="text" name="name" value="Doe" id="name" />
         <label for="surname">Your surname  : </label><input type="text" name="surname" value="John" id="surname" />
         <label for="city">Your city  : </label><input type="text" name="city" value="New York" id="city" />
-        <button type="button" onclick="reset()" name="button">Reset</button>
+        <button type="button" name="button">Reset</button>
     </form>
+
+    <script>
+        const btn = document.querySelector("button");
+
+        btn.addEventListener("click", () => {
+            let result = confirm("Do you really want to reset?");
+
+            if (result) {
+                document.getElementById("name").value = "";
+                document.getElementById("surname").value = "";
+                document.getElementById("city").value = "";
+            }
+        });
+    </script>
 </body>
 
 

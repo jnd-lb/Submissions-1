@@ -13,17 +13,19 @@
     <img src="images/image4.jpg" id="image4" />
     <img src="images/image5.jpg" id="image5" />
     <script>
+        const changeSrc = (element, e) => {
+            element.src = "images/" + element.id + "_2.jpg";
+        }
+
+        const changeSrcBack = (element, e) => {
+            element.src = "images/" + element.id + ".jpg";
+        }
+
         let images = Array.from(document.querySelectorAll("img"));
-        images.forEach((element, i) => {
-            element.addEventListener("mouseenter", () => {
-                element.src = "images/image" + (i + 1) + "_2.jpg";
-            });
+        images.forEach((element) => {
+            element.addEventListener("mouseenter", changeSrc.bind(this, element));
 
-
-            element.addEventListener("mouseout", () => {
-                element.src = "images/image" + (i + 1) + ".jpg";
-            });
-
+            element.addEventListener("mouseout", changeSrcBack.bind(this, element));
         });
     </script>
 </body>
