@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        <input type="text" id="num" placeholder="please enter a number">
+        <input type="text" id="o" placeholder="please enter + for addition x for multiplication">
+        <input type="button" name="" onclick="count()" value="Click me" id="">
+    </form>
+
+    <script>
+
+        let count = () => {
+
+            let total = 0;
+            let inputNum = document.querySelector("#num").value;
+            let opp = document.querySelector("#o").value;
+
+            console.log(opp);
+            if (opp != "+" && opp != "x" && opp != "X") {
+                alert("Wrong Opperator symbol: " + inputNum);
+                return;
+            }
+
+            if (opp == "+") {
+                for (let index =1; index <= inputNum; index++) {
+
+                    total += index;
+                }
+            } else {
+                total  = 1;
+                for (let index = 1; index <= inputNum; index++) {
+                    total *= index;
+                }
+            }
+            alert(total);
+        }
+    </script>
+</body>
+
+</html>
