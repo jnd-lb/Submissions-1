@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="">
+        <input type="text" id="fname" placeholder="Please Enter your Name">
+        <input onclick="greet()" type="button" value="Send">
+    </form>
+
+    <script>
+        const greet = ()=>{
+            let firstName = document.querySelector("#fname");
+            alert(`Hello ${firstName.value}`);
+        }
+    </script>
+</body>
+</html>
