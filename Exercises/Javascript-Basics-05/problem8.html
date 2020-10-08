@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       let randomVal =  Math.floor(Math.random() * 100) + 1;
+       let trialsCouter = 1;
+       let success = false;
+       let LastTry = 0;
+
+       for (let index = 1; index < 9; index++) {
+           let userInput = parseInt(window.prompt("please enter a number:"));
+           if(LastTry == userInput){
+            alert(`You alredy used this number before and it was ${(userInput>randomVal)?"too large":" too small"}` );
+            continue;
+        }
+           
+          
+            if(userInput>randomVal){
+                alert(`Too large - ${trialsCouter}/8`);    
+           }else if(userInput<randomVal){
+            alert(`Too small - ${trialsCouter}/8`);    
+           }else if(userInput == randomVal){
+            alert(`Correct with ${trialsCouter} trials`);    
+            success = true;
+            break;
+           }
+
+           LastTry = userInput;
+           trialsCouter++;
+       }
+
+       if(!success){
+           alert(`fAILED the correct answer was ${randomVal} `);
+       }
+       
+
+    </script>
+</body>
+</html>
