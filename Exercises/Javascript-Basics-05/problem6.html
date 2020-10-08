@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <input type="text" id="num" placeholder="please enter a number">
+        <input type="button" name="" onclick="count()" value="Click me" id="">
+    </form>
+
+    <script>
+        let count = () =>{
+            let total = 0;
+            let inputNum = document.querySelector("#num");    
+          
+            document.write(inputNum.value+": ");
+            for (let index = 1; index <13; index++){
+              document.write(index*inputNum.value+"  ");
+            }
+        }
+
+    </script>
+</body>
+</html>
